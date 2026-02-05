@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cache Components Next.js 16 Demo
 
-## Getting Started
+🚀 **Proyecto educativo para estudiar el comportamiento de Next.js 16 con Cache Components y Partial Prerendering**
 
-First, run the development server:
+Este proyecto es una demostración práctica creada como complemento para mi artículo sobre Cache Components en el blog. Explora cómo funcionan las nuevas capacidades de caché en Next.js 16 mediante ejemplos visuales e interactivos.
 
+## 📖 Sobre el Proyecto
+
+Esta aplicación demuestra los tres tipos de renderizado que ofrece Next.js 16 con Cache Components habilitados:
+
+- **Static Shell**: Contenido completamente prerenderizado
+- **Public Cache**: Componentes cacheados compartidos entre usuarios
+- **Dynamic Content**: Componentes renderizados en cada request
+
+### 🎯 Objetivos de Aprendizaje
+
+- Comprender cómo funciona Partial Prerendering (PPR)
+- Ver la diferencia entre cache público y privado
+- Entender cuándo usar cada estrategia de caché
+- Observar el impacto en el rendimiento
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Next.js 16.1.6** con `cacheComponents: true`
+- **React 19.2.3** con Server Components
+- **TypeScript** para tipado seguro
+- **Tailwind CSS** para estilos modernos
+- **Lucide React** para iconos
+
+## 🚀 Getting Started
+
+### Prerrequisitos
+
+- Node.js 18+ 
+- npm, yarn, pnpm o bun
+
+### Instalación
+
+1. Clona el repositorio:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [https://github.com/Braifz/cache-components-next-16.git](https://github.com/Braifz/cache-components-next-16.git)
+cd cache-components-next-16
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instala las dependencias:
+```bash
+npm install
+# o
+yarn install
+# o
+pnpm install
+# o
+bun install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Inicia el servidor de desarrollo:
+```bash
+npm run dev
+# o
+yarn dev
+# o
+pnpm dev
+# o
+bun run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+├── app/
+│   ├── layout.tsx          # Layout principal
+│   └── page.tsx           # Página principal con demo
+├── src/
+│   ├── components/
+│   │   ├── Presentation.tsx      # Componente estático
+│   │   ├── BestSellerSection.tsx # Componente con "use cache"
+│   │   ├── AllBooks.tsx          # Componente dinámico
+│   │   └── common/
+│   │       └── Spinner.tsx       # Loading fallback
+│   ├── apit.ts             # API mock para datos
+│   └── utils.ts            # Utilidades
+├── next.config.ts          # Configuración con cacheComponents: true
+└── README.md
