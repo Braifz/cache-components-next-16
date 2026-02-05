@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getAllBooks } from "../apit";
 
 const AllBooks = async () => {
+  // This component is not cached - it fetches data on every request
   const books = await getAllBooks();
 
   return (

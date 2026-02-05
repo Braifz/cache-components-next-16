@@ -3,6 +3,7 @@ import { getBestSeller } from "../apit";
 import { cacheLife } from "next/cache";
 
 const BestSellerSection = async () => {
+  // This component is cached
   "use cache";
 
   cacheLife("days");

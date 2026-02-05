@@ -11,7 +11,7 @@ export default async function Home() {
       {/* Static content  - Using Static Shell and is pre-rendered */}
       <Presentation />
 
-      {/* Cached content - Cached for the lifetime of the page */}
+      {/* Cached content - Cached for the lifetime inside the component */}
       <BestSellerSection />
 
       {/* Dynamic content - Revalidated on every request */}
