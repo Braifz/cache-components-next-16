@@ -15,8 +15,7 @@ Esta aplicación demuestra los tres tipos de renderizado que ofrece Next.js 16 c
 ### 🎯 Objetivos de Aprendizaje
 
 - Comprender cómo funciona Partial Prerendering (PPR)
-- Ver la diferencia entre cache público y privado
-- Entender cuándo usar cada estrategia de caché
+- Como utilizar el caché
 - Observar el impacto en el rendimiento
 
 ## 🛠️ Tecnologías Utilizadas
