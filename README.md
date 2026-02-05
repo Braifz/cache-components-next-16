@@ -15,8 +15,7 @@ Esta aplicación demuestra los tres tipos de renderizado que ofrece Next.js 16 c
 ### 🎯 Objetivos de Aprendizaje
 
 - Comprender cómo funciona Partial Prerendering (PPR)
-- Ver la diferencia entre cache público y privado
-- Entender cuándo usar cada estrategia de caché
+- Como utilizar el caché
 - Observar el impacto en el rendimiento
 
 ## 🛠️ Tecnologías Utilizadas
@@ -63,19 +62,3 @@ pnpm dev
 # o
 bun run dev
 ```
-
-
-├── app/
-│   ├── layout.tsx          # Layout principal
-│   └── page.tsx           # Página principal con demo
-├── src/
-│   ├── components/
-│   │   ├── Presentation.tsx      # Componente estático
-│   │   ├── BestSellerSection.tsx # Componente con "use cache"
-│   │   ├── AllBooks.tsx          # Componente dinámico
-│   │   └── common/
-│   │       └── Spinner.tsx       # Loading fallback
-│   ├── apit.ts             # API mock para datos
-│   └── utils.ts            # Utilidades
-├── next.config.ts          # Configuración con cacheComponents: true
-└── README.md
